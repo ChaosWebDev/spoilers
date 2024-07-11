@@ -1,8 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -19,6 +21,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->enum('status', ['New', 'Verified', 'Warning', 'Blocked'])->default('New');
+            $table->text('admin_notes')->nullable()->default(null);
             $table->timestamps();
         });
 
@@ -36,6 +40,17 @@ return new class extends Migration
             $table->longText('payload');
             $table->integer('last_activity')->index();
         });
+
+        DB::table('users')->insert([
+            'id' => Str::uuid(),
+            'name' => "Jordan Gerber",
+            'username' => "jpgerber",
+            'email' => 'jordangerber@gmail.com',
+            'email_verified_at' => null,
+            'password' => bcrypt('jordan'),
+            'status' => 'New',
+            'admin_notes' => "Administrator"
+        ]);
     }
 
     /**

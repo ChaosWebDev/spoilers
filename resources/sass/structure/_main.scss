@@ -1,3 +1,9 @@
 main {
     grid-area: main;
+    padding: 2em;
+
+    background: $bodyBG;
+    color: $bodyFG;
+
+    font-size: 1rem;
 }

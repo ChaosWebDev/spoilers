@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     {{-- Font Awesome --}}
-    <script src="https://kit.fontawesome.com/40616cb1b1.js" crossorigin="anonymous"></script>
+    {{-- <script src="https://kit.fontawesome.com/40616cb1b1.js" crossorigin="anonymous"></script> --}}
 </head>
 
 <body>

@@ -7,12 +7,22 @@ nav {
 
     flex: auto;
 
-    a {
-        color: inherit;
-        text-decoration: none;
+    ul {
+        margin: 2em 0 0 0.5em;
+        padding: 0;
+        list-style-type: none;
 
-        &:hover {
-            text-decoration: underline;
+        li {
+            padding: 5px 10px;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }

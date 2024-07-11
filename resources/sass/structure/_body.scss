@@ -1,0 +1,17 @@
+body {
+    @include reset;
+
+    display: grid;
+    grid-template-areas: 'nav header'
+        'nav main'
+        'nav footer';
+    grid-template-columns: minmax(75px, 150px) 1fr;
+    grid-template-rows: 3em auto 1.5em;
+
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    background: $bodyBG;
+    color: $bodyFG;
+}

@@ -1,0 +1,12 @@
+footer {
+    grid-area: footer;
+
+    @extend .row;
+    @extend .align-center;
+    justify-content: end;
+
+    background: $footerBG;
+    color: $footerFG;
+
+    padding-right: 1em;
+}

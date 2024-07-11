@@ -7,3 +7,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', function () {
     return redirect()->route('home');
 });
+
+
+
+
+require_once(__DIR__ . "/game.php");
